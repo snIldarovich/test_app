@@ -51,7 +51,7 @@
   border-color: unset;
   width: 20px;
   height: 20px;
-  background-image: url(../../img/arrow-default.png);
+  background-image: url(./../img/arrow-default.png);
   transform: translateY(-50%) rotate(0deg);
   transition: all ease-in-out 0.3s;
 }
@@ -63,7 +63,7 @@
 }
 
 .is-open.choices[data-type*=select-one]:after {
-  background-image: url(../../img/arrow.png);
+  background-image: url(./../img/arrow.png);
   transform: translateY(-50%) rotate(-180deg);
   transition: all ease-in-out 0.3s;
 }

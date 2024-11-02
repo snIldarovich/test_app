@@ -2,7 +2,7 @@
   @include bg-cover;
 
   padding: 120px 0 150px;
-  background-image: url(../../img/bottom-bg.png);
+  background-image: url(./../img/bottom-bg.png);
 
   &__title {
     margin: 0 auto;
@@ -53,7 +53,7 @@
     top: 50%;
     width: 111px;
     height: 6px;
-    background-image: url(../../img/dots.png);
+    background-image: url(./../img/dots.png);
     transform: translateY(-50%);
 
     @include big-tablet {
@@ -189,7 +189,7 @@
   }
   
   &__btn-upload span::before {
-    content: url(../../img/upload.icon.png);
+    content: url(./../img/upload.icon.png);
   }
   
   &__btn-submit {
