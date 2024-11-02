@@ -19,5 +19,5 @@ document.addEventListener("mouseup", function() {
 function updateValue() {
   const value = slider.value;
   // Обновляем значение процента на странице
-  document.getElementById("percent").textContent = value + ' %';
+  document.getElementById("percent").textContent = value + '%';
 }

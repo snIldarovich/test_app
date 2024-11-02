@@ -49,15 +49,15 @@
   }
 
   .payment__item--qiwi::before {
-    content: url(../../img/qiwiwallet-icon.png);
+    content: url(./../img/qiwiwallet-icon.png);
   }
 
   .payment__item--yandex::before {
-    content: url(../../img/yandexmoney-icon.png);
+    content: url(./../img/yandexmoney-icon.png);
   }
 
   .payment__item--webmoney::before {
-    content: url(../../img/webmoney-icon.png);
+    content: url(./../img/webmoney-icon.png);
   }
 
   .social__list {
@@ -89,10 +89,10 @@
   }
 
   .social__link--email::before {
-    content: url(../../img/email-icon.png);
+    content: url(./../img/email-icon.png);
   }
 
   .social__link--vk::before {
-    content: url(../../img/vk-icon.png);
+    content: url(./../img/vk-icon.png);
   }
 }
