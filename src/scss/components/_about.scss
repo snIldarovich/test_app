@@ -1,0 +1,98 @@
+.about {
+  @include bg-cover;
+
+  padding: 205px 0 203px;
+  background-image: url(../../img/top-bg.png);
+
+  &__inner {
+    max-width: 780px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: var(--main-title-size);
+    line-height: normal;
+    text-transform: uppercase;
+    color: var(--accent-color);
+  }
+  
+  &__title span {
+    color: var(--black-color);
+  }
+
+  &__list-title {
+    margin-top: 90px;
+    font-weight: 700;
+    font-size: var(--default-size);
+    line-height: normal;
+    color: var(--black-color);
+  }
+
+  &__list {
+    margin-top: 10px;
+    padding-left: 25px;
+  }
+
+  &__list-item {
+    position: relative;
+    font-weight: 400;
+    font-size: var(--default-size);
+    color: var(--black-color);
+  }
+
+  &__list-item::before {
+    @include pseudo;
+    left: -25px;
+    top: 0;
+    width: 25px;
+    height: 22px;
+    background-image: url(../../img/dash.png);
+  }
+
+  &__list-item + &__list-item {
+    margin-top: 5px;
+  }
+
+  &__btns {
+    display: flex;
+    column-gap: 30px;
+    margin-top: 80px;
+  }
+
+  &__btn-order,
+  &__btn-more {
+    @include flex-all-center;
+    border-radius: 4px;
+    padding: 14px 10px;
+    width: 100%;
+    max-width: 183px;
+    font-weight: 400;
+    font-size: var(--small-size);
+    text-align: center;
+    text-transform: uppercase;
+    transition: all ease-in-out 0.3s;
+  }
+  &__btn-order {
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+    background: var(--accent-color);
+    
+  }
+  &__btn-more {
+    border: 1px solid #6f6d7b;
+    color: var(--btn-hover-color);
+    background: var(--light-color);
+  }
+  
+  &__btn-order:hover {
+    border: 1px solid #6f6d7b;
+    color: var(--btn-hover-color);
+    background: var(--light-color);
+  }
+
+  &__btn-more:hover {
+    border: 1px solid var(--accent-color);
+    color: var(--light-color);
+    background: var(--accent-color);
+  }
+}

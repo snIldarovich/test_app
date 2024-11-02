@@ -1,0 +1,211 @@
+.order {
+  @include bg-cover;
+
+  padding: 120px 0 150px;
+  background-image: url(../../img/bottom-bg.png);
+
+  &__title {
+    margin: 0 auto;
+    max-width: 560px;
+    font-weight: 800;
+    font-size: var(--title-size);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--accent-color);
+  }
+  
+  &__title span {
+    color: var(--light-color);
+  }
+
+  &__subtitle {
+    margin: 30px auto 0;
+    max-width: 560px;
+    font-weight: 400;
+    font-size: var(--input-size);
+    text-align: center;
+    color: #bbb;
+  }
+
+  &__items {
+    @include flex-s-sb;
+
+    column-gap: 15px;
+    margin-top: 80px;
+  }
+
+  &__item {
+    @include flex-col;
+
+    width: 100%;
+    max-width: 209px;
+  }
+
+  &__item picture {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &__item picture::before {
+    @include pseudo;
+
+    left: calc(-100% - 40px);
+    top: 50%;
+    width: 111px;
+    height: 6px;
+    background-image: url(../../img/dots.png);
+    transform: translateY(-50%);
+
+    @include big-tablet {
+      left: -123%;
+      width: 95px;
+    }
+
+    @media (max-width: 1120px) {
+      display: none;
+    }
+  }
+
+  &__item:first-child picture::before {
+    display: none;
+  }
+
+  &__image {
+    border-radius: 50%;
+    border: 5px solid var(--border-thumb-color);
+    background-color: var(--accent-color);
+    margin: 0 auto;
+    padding: 17px;
+    width: 100%;
+    display: block;
+    max-width: 100px;
+    height: 100px;
+  }
+
+  &__item-text {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: var(--item-size);
+    line-height: normal;
+    text-align: center;
+    color: var(--light-color);
+  }
+
+  &__form {
+    // display: grid;
+    grid-gap: 30px 30px;
+    // grid-template-columns: repeat(auto-fill, minmax(31% , 1fr));
+    // grid-auto-flow: dense;
+    // grid-template-rows: repeat(2, 1fr);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 85px;
+  }
+
+  &__scrollbar-inner {
+    // grid-column: span 2;
+    min-width: 65.8%;
+    flex-grow: 1;
+  }
+
+  &__scrollbar-descr {
+    @include flex-all-sb;
+
+    column-gap: 10px;
+  }
+
+  &__scrollbar-title,
+  &__scrollbar-percent {
+    font-weight: 400;
+    font-size: var(--input-size);
+    line-height: normal;
+    color: var(--light-color);
+  }
+
+  &__scrollbar-percent {
+    font-weight: 600;
+    color: var(--percent-color);
+  }
+
+  &__input {
+    border: 1px solid var(--light-color);
+    border-radius: 3px;
+    padding: 10px;
+    min-width: 31.625%;
+    flex-grow: 1;
+    height: min-content;
+    min-height: 48px;
+    font-weight: 400;
+    font-size: var(--input-size);
+    color: var(--input-color);
+    background: var(--input-bg-color);
+  }
+
+  &__input::placeholder {
+    font-weight: 400;
+    font-size: var(--input-size);
+    color: var(--input-color);
+  }
+
+  &__scrollbar-inner {
+    flex-grow: 1;
+  }
+
+  &__scrollbar {
+    height: min-content;
+    max-height: 48px;
+  }
+  
+  &__btn-upload,
+  &__btn-submit {
+    @include flex-all-center;
+    
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  &__btn-upload {
+    border: 2px solid var(--accent-color);
+    flex-grow: 1;
+    min-width: 31.625%;
+    text-transform: uppercase;
+    color: var(--input-color);
+    background: var(--light-color);
+  }
+  
+  &__btn-upload:hover {
+    background: var(--accent-color);
+  }
+  
+  &__btn-upload span {
+    position: relative;
+    padding-right: 10px;
+  }
+  
+  &__btn-upload span::before {
+    content: url(../../img/upload.icon.png);
+  }
+  
+  &__btn-submit {
+    border: 1px solid var(--light-color);
+    margin: 55px auto 0;
+    max-width: 31.625%;
+    flex-grow: 1;
+    height: 48px;
+    color: var(--light-color);
+    background: var(--accent-color);
+  }
+  
+  &__btn-submit:hover {
+    border: 1px solid #6f6d7b;
+    color: var(--btn-hover-color);
+    background: var(--light-color);
+  }
+
+}
